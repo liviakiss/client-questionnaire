@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Questionnaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="form-wrapper">
+    <h1>Let's work together</h1>
+    <p class="subtitle">Tell me about your project and I'll get back to you with a proposal.</p>
+
+    <form id="questionnaireForm">
+
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company or project name</label>
+        <input type="text" id="company" name="company" placeholder="Optional">
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">The Core Idea</p>
+        <label for="core-idea">Describe your product or project in 2–3 sentences. What is it, and what does it do?</label>
+        <textarea id="core-idea" name="core-idea" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">The Problem</p>
+        <label for="problem">What specific problem are you trying to solve for your users? Why does this matter?</label>
+        <textarea id="problem" name="problem" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Target Audience</p>
+        <label for="target-audience">Who are the primary users? Consider their age, tech-savviness, and goals.</label>
+        <textarea id="target-audience" name="target-audience" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Visual Style</p>
+        <label for="visual-style">Describe the visual style you're aiming for (e.g., minimalist, playful, professional). Or do you have existing brand guidelines?</label>
+        <textarea id="visual-style" name="visual-style" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Competitors</p>
+        <label for="competitors">Name 2–3 competitors whose design or functionality you admire — or dislike. Tell me why.</label>
+        <textarea id="competitors" name="competitors" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Core Values & Personality</p>
+        <label for="core-values">What are the core values and personality traits you want your brand to embody? (e.g., Professional & Trustworthy vs. Bold & Disruptive)</label>
+        <textarea id="core-values" name="core-values" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Must-Have Features</p>
+        <label for="must-have-features">What are the 3 non-negotiable features for this version? Focus on what's essential.</label>
+        <textarea id="must-have-features" name="must-have-features" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Development</p>
+        <label for="development">Do you have a development team ready, or are you looking for frontend implementation as well?</label>
+        <input type="radio" id="i-have" name="development" value="i-have" required>
+        <label for="i-have">I have a dev team</label>
+        <input type="radio" id="i-need" name="development" value="i-need" required>
+        <label for="i-need">I need frontend too</label>
+        <input type="radio" id="not-sure" name="development" value="not-sure" required>
+        <label for="not-sure">I'm not sure</label>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Success Metrics</p>
+        <label for="success-metrics">How will you know this project was a success 6 months from now? What does 'done well' look like? (e.g., user engagement, conversion rate, retention)</label>
+        <textarea id="success-metrics" name="success-metrics" placeholder="Your answer..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">File Rights & Ownership</p>
+        <label for="rights-ownership">We take great pride in the work we create together. To ensure we’re aligned on how this project is handled after completion, please select the visibility option that best fits your company’s needs:</label>
+        <input type="radio" id="full" name="rights-ownership" value="full" required>
+        <label for="full">Full Permission (Preferred)</label>
+        <p>The Client grants ALIVE Design Studio the right to display the final project (logo, visual identity, etc.) in my portfolio and marketing materials.</p>
+        <p>Note: This option includes our standard 5% Portfolio Discount as a thank you for allowing us to showcase our work.</p>
+        <input type="radio" id="anonymized" name="rights-ownership" value="anonymized" required>
+        <label for="anonymized">Anonymized Showcase</label>
+        <p>You may showcase the design work publicly, but all sensitive data (names, contact info, pricing) will be replaced with placeholder content.</p>
+        <input type="radio" id="no-permission" name="rights-ownership" value="no-permission" required>
+        <label for="no-permission">No Permission (Private)</label>
+        <p>The project remains strictly confidential and will never be shared on our promotional channels.</p>
+        <p>Note: Because this limits our studio’s ability to market our skills, this selection carries a Privacy Fee (typically 10-15% of the total project cost) to offset the loss of portfolio value.</p>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Your Budget</p>
+        <label for="budget">What is your estimated budget for this project?</label>
+        <input type="number" name="budget" id="budget" placeholder="e.g., 1500" required>
+        <input type="radio" id="dollar" name="currency" value="dollar">
+        <label for="dollar">$</label>
+        <input type="radio" id="euro" name="currency" value="euro">
+        <label for="euro">€</label>
+        <input type="radio" id="pound" name="currency" value="pound">
+        <label for="pound">£</label>
+        <label for="other">Other Currency</label>
+        <textarea id="other-currency" name="other-currency" placeholder="Specify other currency..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <p class="field-label">Payment Method</p>
+        <label for="payment-method">To ensure a smooth onboarding process, which payment method does your company prefer for international invoicing?</label>
+        <input type="radio" id="bank" name="payment-method" value="bank-transfer">
+        <label for="bank">Bank Transfer (Revolut)</label>
+        <input type="radio" id="paypal" name="payment-method" value="paypal">
+        <label for="paypal">PayPal</label>
+      </div>
+
+      <div>
+        <button type="submit">Submit Questionnaire</button>
+      </div>
+    </form>
+
+      <div class="next-steps">
+        <p class="field-label">What Happens Next?</p>
+        <p>After you submit this form, I will review your answers and get back to you within 48 hours with a proposal outlining the next steps.</p>
+        <p>In the meantime, feel free to reach out if you have any questions or additional information you'd like to share.</p>
+      </div>
+
+      <div class="thank-you">
+        <p class="field-label">Thank you for your time!</p>
+        <p>Your answers help me design something that truly works for you and your users. The more honest and detailed you are, the better the result. No pressure — there are no wrong answers here.</p>
+      </div>
+    </main>
+</body>
+</html>
