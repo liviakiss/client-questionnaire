@@ -15,17 +15,17 @@
     <form id="questionnaireForm">
 
       <div class="form-group">
-        <label for="name">Your name</label>
+        <label class="field-label" for="name">Your name</label>
         <input type="text" id="name" name="name" placeholder="Jane Smith" required>
       </div>
 
       <div class="form-group">
-        <label for="email">Email address</label>
+        <label class="field-label" for="email">Email address</label>
         <input type="email" id="email" name="email" placeholder="jane@example.com" required>
       </div>
 
       <div class="form-group">
-        <label for="company">Company or project name</label>
+        <label class="field-label" for="company">Company or project name</label>
         <input type="text" id="company" name="company" placeholder="Optional">
       </div>
 
@@ -72,15 +72,23 @@
       </div>
 
       <div class="form-group">
-        <p class="field-label">Development</p>
-        <label for="development">Do you have a development team ready, or are you looking for frontend implementation as well?</label>
-        <input type="radio" id="i-have" name="development" value="i-have" required>
-        <label for="i-have">I have a dev team</label>
-        <input type="radio" id="i-need" name="development" value="i-need" required>
-        <label for="i-need">I need frontend too</label>
-        <input type="radio" id="not-sure" name="development" value="not-sure" required>
-        <label for="not-sure">I'm not sure</label>
-      </div>
+  <p class="field-label">Development</p>
+  <label>Do you have a development team ready, or are you looking for frontend implementation as well?</label>
+  <div class="radio-group">
+    <label class="radio-option">
+      <input type="radio" name="development" value="i-have" required>
+      <span>I have a dev team</span>
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="development" value="i-need">
+      <span>I need frontend too</span>
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="development" value="not-sure">
+      <span>I'm not sure</span>
+    </label>
+  </div>
+</div>
 
       <div class="form-group">
         <p class="field-label">Success Metrics</p>
@@ -89,43 +97,78 @@
       </div>
 
       <div class="form-group">
-        <p class="field-label">File Rights & Ownership</p>
-        <label for="rights-ownership">We take great pride in the work we create together. To ensure we’re aligned on how this project is handled after completion, please select the visibility option that best fits your company’s needs:</label>
-        <input type="radio" id="full" name="rights-ownership" value="full" required>
-        <label for="full">Full Permission (Preferred)</label>
-        <p>The Client grants ALIVE Design Studio the right to display the final project (logo, visual identity, etc.) in my portfolio and marketing materials.</p>
-        <p>Note: This option includes our standard 5% Portfolio Discount as a thank you for allowing us to showcase our work.</p>
-        <input type="radio" id="anonymized" name="rights-ownership" value="anonymized" required>
-        <label for="anonymized">Anonymized Showcase</label>
-        <p>You may showcase the design work publicly, but all sensitive data (names, contact info, pricing) will be replaced with placeholder content.</p>
-        <input type="radio" id="no-permission" name="rights-ownership" value="no-permission" required>
-        <label for="no-permission">No Permission (Private)</label>
-        <p>The project remains strictly confidential and will never be shared on our promotional channels.</p>
-        <p>Note: Because this limits our studio’s ability to market our skills, this selection carries a Privacy Fee (typically 10-15% of the total project cost) to offset the loss of portfolio value.</p>
-      </div>
+  <p class="field-label">File Rights & Ownership</p>
+  <label>We take great pride in the work we create together. To ensure we're aligned on how this project is handled after completion, please select the visibility option that best fits your company's needs:</label>
+  <div class="radio-group">
 
-      <div class="form-group">
-        <p class="field-label">Your Budget</p>
-        <label for="budget">What is your estimated budget for this project?</label>
-        <input type="number" name="budget" id="budget" placeholder="e.g., 1500" required>
-        <input type="radio" id="dollar" name="currency" value="dollar">
-        <label for="dollar">$</label>
-        <input type="radio" id="euro" name="currency" value="euro">
-        <label for="euro">€</label>
-        <input type="radio" id="pound" name="currency" value="pound">
-        <label for="pound">£</label>
-        <label for="other">Other Currency</label>
-        <textarea id="other-currency" name="other-currency" placeholder="Specify other currency..."></textarea>
+    <label class="radio-option radio-option--detailed">
+      <div class="radio-option-header">
+        <input type="radio" name="rights-ownership" value="full" required>
+        <span>Full Permission <em>(Preferred)</em></span>
       </div>
+      <p>ALIVE Design Studio may display the final project in our portfolio and marketing materials.</p>
+      <p class="radio-note">✦ Includes a 5% Portfolio Discount as a thank you.</p>
+    </label>
 
-      <div class="form-group">
-        <p class="field-label">Payment Method</p>
-        <label for="payment-method">To ensure a smooth onboarding process, which payment method does your company prefer for international invoicing?</label>
-        <input type="radio" id="bank" name="payment-method" value="bank-transfer">
-        <label for="bank">Bank Transfer (Revolut)</label>
-        <input type="radio" id="paypal" name="payment-method" value="paypal">
-        <label for="paypal">PayPal</label>
+    <label class="radio-option radio-option--detailed">
+      <div class="radio-option-header">
+        <input type="radio" name="rights-ownership" value="anonymized">
+        <span>Anonymized Showcase</span>
       </div>
+      <p>You may showcase the design publicly, but all sensitive data will be replaced with placeholder content.</p>
+    </label>
+
+    <label class="radio-option radio-option--detailed">
+      <div class="radio-option-header">
+        <input type="radio" name="rights-ownership" value="no-permission">
+        <span>No Permission (Private)</span>
+      </div>
+      <p>The project remains strictly confidential and will never appear on our promotional channels.</p>
+      <p class="radio-note">Note: A Privacy Fee of 10–15% applies to offset the loss of portfolio value.</p>
+    </label>
+
+  </div>
+</div>
+
+<div class="form-group">
+  <p class="field-label">Your Budget</p>
+  <label for="budget">What is your estimated budget for this project?</label>
+  <p class="field-label" style="margin-top: 0.25rem;">Select currency</p>
+  <div class="budget-row">
+    <input type="number" name="budget" id="budget" placeholder="e.g., 1500" required>
+    <div class="currency-group">
+      <label class="radio-option radio-option--compact">
+        <input type="radio" name="currency" value="dollar">
+        <span>$</span>
+      </label>
+      <label class="radio-option radio-option--compact">
+        <input type="radio" name="currency" value="euro">
+        <span>€</span>
+      </label>
+      <label class="radio-option radio-option--compact">
+        <input type="radio" name="currency" value="pound">
+        <span>£</span>
+      </label>
+    </div>
+  </div>
+  <label for="other-currency">Other currency</label>
+  <textarea id="other-currency" name="other-currency" placeholder="Specify other currency..."></textarea>
+</div>
+
+<div class="form-group">
+  <p class="field-label">Payment Method</p>
+  <label>To ensure a smooth onboarding process, which payment method does your company prefer for international invoicing?</label>
+  <div class="radio-group">
+    <label class="radio-option">
+      <input type="radio" name="payment-method" value="bank-transfer">
+      <span>Bank Transfer (Revolut)</span>
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="payment-method" value="paypal">
+      <span>PayPal</span>
+    </label>
+  </div>
+</div>
 
       <div>
         <button type="submit">Submit Questionnaire</button>
@@ -133,14 +176,14 @@
     </form>
 
       <div class="next-steps">
-        <p class="field-label">What Happens Next?</p>
-        <p>After you submit this form, I will review your answers and get back to you within 48 hours with a proposal outlining the next steps.</p>
-        <p>In the meantime, feel free to reach out if you have any questions or additional information you'd like to share.</p>
+        <p class="field-label-dark">What Happens Next?</p>
+        <p class="dark">After you submit this form, I will review your answers and get back to you within 48 hours with a proposal outlining the next steps.</p>
+        <p class="dark">In the meantime, feel free to reach out if you have any questions or additional information you'd like to share.</p>
       </div>
 
       <div class="thank-you">
-        <p class="field-label">Thank you for your time!</p>
-        <p>Your answers help me design something that truly works for you and your users. The more honest and detailed you are, the better the result. No pressure — there are no wrong answers here.</p>
+        <p class="field-label-dark">Thank you for your time!</p>
+        <p class="dark">Your answers help me design something that truly works for you and your users. The more honest and detailed you are, the better the result. No pressure — there are no wrong answers here.</p>
       </div>
     </main>
 </body>

@@ -1,0 +1,251 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Serif Display', serif;
+  background-color: #0f0e0e;
+  color: #F5F5F3;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* ── Form Wrapper ── */
+.form-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #797979;
+  margin-bottom: 2.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+/* ── Cards ── */
+.form-group {
+  background-color: #1A1A1A;
+  border: 1px solid #F5F5F3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ── Labels & Field Labels ── */
+.field-label {
+  font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+}
+
+label {
+  font-size: clamp(0.875rem, 2.5vw, 0.95rem);
+  font-weight: 500;
+  color: #F5F5F3;
+}
+
+/* ── Inputs & Textareas ── */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #F5F5F3;
+  border-radius: 8px;
+  font-size: clamp(0.875rem, 2.5vw, 0.95rem);
+  font-family: inherit, inter;
+  color: #F5F5F3;
+  background-color: #272626;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2a6f62;
+  box-shadow: 0 0 0 3px rgba(216, 216, 216, 0.08);
+}
+
+/* ── Radio Groups ── */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  font-weight: 500;
+}
+
+.radio-option:hover {
+  border-color: #2a6f62;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #2a6f62;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.radio-option--detailed {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.radio-option--detailed .radio-option-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.radio-option--detailed p {
+  font-size: clamp(0.78rem, 2vw, 0.85rem);
+  color: #797979;
+  padding-left: 1.75rem;
+  font-weight: 400;
+}
+
+.radio-note {
+  font-size: clamp(0.78rem, 2vw, 0.85rem);
+  color: #797979 !important;
+  font-style: italic;
+}
+
+.budget-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.budget-row input[type="number"] {
+  flex: 1;
+}
+
+.currency-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.radio-option--compact {
+  padding: 0.6rem 0.9rem;
+  justify-content: center;
+  min-width: 2.5rem;
+}
+
+/* ── Submit Button ── */
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #F5F5F3;
+  color: #1a1a1a;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #2a6f62;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* ── Next Steps & Thank You ── */
+.next-steps,
+.thank-you {
+  background-color: #F5F5F3;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label-dark {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f0e0e;
+}
+
+.dark {
+    color: #1a1a1a;
+}
+
+/* ── Breakpoints ── */
+@media (max-width: 600px) {
+  body {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .form-group {
+    padding: 1.1rem;
+    border-radius: 10px;
+  }
+
+  .budget-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .currency-group {
+    justify-content: flex-start;
+  }
+
+  .radio-option--compact {
+    flex: 1;
+    justify-content: center;
+  }
+
+  button[type="submit"] {
+    padding: 0.875rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .form-group {
+    padding: 1rem;
+  }
+}
