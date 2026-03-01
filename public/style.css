@@ -17,6 +17,31 @@ html {
   font-size: 16px;
 }
 
+/* ── Loading screen ── */
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0e0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 100;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F5F5F3;
+}
+
+.loading-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 400;
+}
+
 /* ── Form Wrapper ── */
 .form-wrapper {
   max-width: 680px;
