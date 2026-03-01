@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('http://localhost:3000/submit', {
+      const response = await fetch('https://client-questionnaire.onrender.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
