@@ -1,13 +1,10 @@
-console.log('script loaded');
-console.log(document.getElementById('questionnaireForm'));
-
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Show/hide other currency ──
   const currencyRadios = document.querySelectorAll('input[name="currency"]');
   const otherCurrencyField = document.getElementById('other-currency');
   const otherCurrencyLabel = otherCurrencyField.previousElementSibling;
 
-  // Hide by default
   otherCurrencyField.style.display = 'none';
   otherCurrencyLabel.style.display = 'none';
 
@@ -23,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-});
-
-// ── Form submission ──
+  // ── Form submission ──
   const form = document.getElementById('questionnaireForm');
 
   form.addEventListener('submit', async (e) => {
@@ -44,14 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
 
       if (result.success) {
-  document.querySelector('h1').style.display = 'none';
-  document.querySelectorAll('.subtitle').forEach(el => el.style.display = 'none');
-  document.querySelector('.next-steps').style.display = 'flex';
-  document.querySelector('.thank-you').style.display = 'flex';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+        document.querySelector('h1').style.display = 'none';
+        document.querySelectorAll('.subtitle').forEach(el => el.style.display = 'none');
+        form.style.display = 'none';
+        document.querySelector('.next-steps').style.display = 'flex';
+        document.querySelector('.thank-you').style.display = 'flex';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     } catch (error) {
       console.error('Submission error:', error);
       alert('Could not connect to the server. Please try again.');
     }
   });
+
+});
