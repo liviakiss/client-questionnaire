@@ -214,6 +214,13 @@ button[type="submit"]:active {
     color: #1a1a1a;
 }
 
+.post-submit-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* ── Breakpoints ── */
 @media (max-width: 600px) {
   body {
