@@ -44,12 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
 
       if (result.success) {
-        form.style.display = 'none';
-        document.querySelector('.thank-you').scrollIntoView({ behavior: 'smooth' });
-        alert('Your questionnaire was submitted successfully!');
-      } else {
-        alert('Something went wrong. Please try again.');
-      }
+  document.querySelector('h1').style.display = 'none';
+  document.querySelector('.subtitle').style.display = 'none';
+  form.style.display = 'none';
+  document.querySelector('.next-steps').style.display = 'flex';
+  document.querySelector('.thank-you').style.display = 'flex';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
     } catch (error) {
       console.error('Submission error:', error);
       alert('Could not connect to the server. Please try again.');
