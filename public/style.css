@@ -219,6 +219,7 @@ button[type="submit"]:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 
 /* ── Breakpoints ── */
