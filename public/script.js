@@ -29,10 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('questionnaireForm');
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // stop the page from refreshing
+    e.preventDefault();
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    console.log('Form data:', data); // we'll check this first before sending to server
+    try {
+      const response = await fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        form.style.display = 'none';
+        document.querySelector('.thank-you').scrollIntoView({ behavior: 'smooth' });
+        alert('Your questionnaire was submitted successfully!');
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Could not connect to the server. Please try again.');
+    }
   });
