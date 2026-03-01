@@ -222,6 +222,11 @@ button[type="submit"]:active {
   gap: 1rem;
 }
 
+.post-submit-view .next-steps,
+.post-submit-view .thank-you {
+  display: flex;
+}
+
 /* ── Breakpoints ── */
 @media (max-width: 600px) {
   body {
