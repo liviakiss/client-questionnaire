@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Brief · ALIVE Design Studio</title>
+  <meta name="description" content="The detailed brief to kick off our project properly." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="form-header">
+    <div class="container">
+      <a href="https://alivedesignstudio.net" class="logo">
+        <span class="logo-name">ALIVE</span>
+        <span class="logo-tagline">Design Studio</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="form-main">
+    <div class="container">
+
+      <div class="form-intro">
+        <p class="form-eyebrow">Project Brief · Onboarding</p>
+        <h1 class="form-title">Project <em>Brief</em></h1>
+        <p class="form-subtitle">Now that we're working together, this brief helps me understand your product, users, and goals properly. Take your time — the more detail you share, the better the final result. Nothing here is locked in; we'll refine everything together.</p>
+      </div>
+
+      <form id="briefForm" class="form-grid" novalidate>
+
+        <!-- Section 1 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">01</span>
+            <h2 class="section-title">About the project</h2>
+          </div>
+
+          <div class="field">
+            <label for="companyName">Company or project name</label>
+            <input type="text" id="companyName" name="companyName" required />
+          </div>
+
+          <div class="field">
+            <label for="coreIdea">The core idea</label>
+            <p class="field-help">Describe your product in 2–3 sentences.</p>
+            <textarea id="coreIdea" name="coreIdea" rows="3" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="problem">The problem</label>
+            <p class="field-help">What specific problem are you solving for users, and why does it matter?</p>
+            <textarea id="problem" name="problem" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="audience">Target audience</label>
+            <p class="field-help">Who are the primary users? Consider age, tech-savviness, and goals.</p>
+            <textarea id="audience" name="audience" rows="3" required></textarea>
+          </div>
+
+          <div class="field">
+            <label>Stage</label>
+            <div class="radio-group horizontal">
+              <label class="radio-card"><input type="radio" name="stage" value="New idea" required /><span>New idea</span></label>
+              <label class="radio-card"><input type="radio" name="stage" value="MVP" /><span>MVP</span></label>
+              <label class="radio-card"><input type="radio" name="stage" value="Mature product" /><span>Mature product</span></label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Design direction</h2>
+          </div>
+
+          <div class="field">
+            <label for="visualStyle">Visual style</label>
+            <p class="field-help">Describe the visual style you're aiming for (e.g. minimalist, playful, professional), or share existing brand guidelines.</p>
+            <textarea id="visualStyle" name="visualStyle" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="personality">Core values & personality</label>
+            <p class="field-help">What traits should your brand embody? (e.g. Professional & Trustworthy vs. Bold & Disruptive)</p>
+            <textarea id="personality" name="personality" rows="3"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="competitors">Competitors & inspiration</label>
+            <p class="field-help">Name 2–3 products whose design or functionality you admire or dislike, and why.</p>
+            <textarea id="competitors" name="competitors" rows="4"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="visualInspiration">Anything visual you love?</label>
+            <p class="field-help">Links, screenshots, moodboards welcome — paste URLs here.</p>
+            <textarea id="visualInspiration" name="visualInspiration" rows="3"></textarea>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Scope & features</h2>
+          </div>
+
+          <div class="field">
+            <label for="mustHave">Must-have features</label>
+            <p class="field-help">What are the 3 non-negotiable features for this version?</p>
+            <textarea id="mustHave" name="mustHave" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="niceToHave">Nice-to-have features</label>
+            <p class="field-help">Things you'd love but can live without.</p>
+            <textarea id="niceToHave" name="niceToHave" rows="3"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Development</label>
+            <p class="field-help">Do you have a dev team ready, or do you need frontend implementation too?</p>
+            <div class="radio-group">
+              <label class="radio-card"><input type="radio" name="development" value="I have a dev team" required /><span>I have a dev team</span></label>
+              <label class="radio-card"><input type="radio" name="development" value="I need frontend too" /><span>I need frontend too</span></label>
+              <label class="radio-card"><input type="radio" name="development" value="Not sure yet" /><span>I'm not sure yet</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="techStack">Technical constraints</label>
+            <p class="field-help">Any existing tech stack, frameworks, or requirements I should know about?</p>
+            <textarea id="techStack" name="techStack" rows="3"></textarea>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Success & outcomes</h2>
+          </div>
+
+          <div class="field">
+            <label for="successMetrics">Success metrics</label>
+            <p class="field-help">How will you know this project was a success 6 months from now? (e.g. user engagement, conversion rate, retention)</p>
+            <textarea id="successMetrics" name="successMetrics" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="timeline">Timeline</label>
+            <p class="field-help">When does this need to launch or be ready?</p>
+            <input type="text" id="timeline" name="timeline" required />
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">05</span>
+            <h2 class="section-title">Practical details</h2>
+          </div>
+
+          <div class="field">
+            <label>File rights & ownership</label>
+            <p class="field-help">How can this project be shown afterwards?</p>
+            <div class="radio-group">
+              <label class="radio-card"><input type="radio" name="rights" value="Full Permission" required /><span><strong>Full Permission</strong> (Preferred) — includes a 5% portfolio discount as a thank you</span></label>
+              <label class="radio-card"><input type="radio" name="rights" value="Anonymized Showcase" /><span><strong>Anonymized Showcase</strong> — sensitive data replaced with placeholders</span></label>
+              <label class="radio-card"><input type="radio" name="rights" value="No Permission" /><span><strong>No Permission (Private)</strong> — privacy fee of 10–15% applies</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="budget">Budget</label>
+            <p class="field-help">Final confirmed budget for this project.</p>
+            <div class="form-row budget-row">
+              <select id="briefCurrency" name="currency" class="currency-select">
+                <option value="EUR">€ EUR</option>
+                <option value="USD">$ USD</option>
+                <option value="GBP">£ GBP</option>
+                <option value="Other">Other</option>
+              </select>
+              <input type="text" id="budget" name="budget" placeholder="e.g. 3,500" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Payment method</label>
+            <div class="radio-group horizontal">
+              <label class="radio-card"><input type="radio" name="payment" value="Bank Transfer (Revolut)" required /><span>Bank Transfer (Revolut)</span></label>
+              <label class="radio-card"><input type="radio" name="payment" value="PayPal" /><span>PayPal</span></label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">06</span>
+            <h2 class="section-title">Anything else</h2>
+          </div>
+
+          <div class="field">
+            <label for="other">Is there anything else I should know before we start?</label>
+            <p class="field-help">Concerns, hopes, past bad experiences with designers, dealbreakers — honesty helps.</p>
+            <textarea id="other" name="other" rows="4"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="email">Your email</label>
+            <p class="field-help">Where I should send the confirmation.</p>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+        </section>
+
+        <button type="submit" class="submit-btn">
+          <span>Submit Brief</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+      </form>
+
+      <div id="confirmation" class="confirmation" hidden>
+        <div class="confirmation-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M16 24l6 6 12-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="confirmation-title">Thank you — this gives me everything I need.</h2>
+        <p class="confirmation-text">I'll review your answers in detail and come back within 2 working days with any follow-up questions before we begin.</p>
+        <p class="confirmation-text small">Excited to work together.</p>
+        <a href="https://alivedesignstudio.net" class="confirmation-link">← Back to site</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="brief.js"></script>
+
+</body>
+</html>

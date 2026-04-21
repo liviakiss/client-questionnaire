@@ -1,9 +1,8 @@
-const form = document.getElementById('intakeForm');
+const form = document.getElementById('briefForm');
 const confirmation = document.getElementById('confirmation');
 const submitBtn = form.querySelector('.submit-btn');
 
-// Autosave progress
-const STORAGE_KEY = 'alive-intake-draft';
+const STORAGE_KEY = 'alive-brief-draft';
 
 function saveDraft() {
   const data = {};
@@ -19,12 +18,11 @@ function loadDraft() {
     Object.entries(data).forEach(([key, value]) => {
       const field = form.elements[key];
       if (!field) return;
-      if (field.length) {
-        // radio group
+      if (field.length && field[0] && field[0].type === 'radio') {
         Array.from(field).forEach(el => {
           if (el.value === value) el.checked = true;
         });
-      } else {
+      } else if (field.tagName) {
         field.value = value;
       }
     });
@@ -38,17 +36,16 @@ form.addEventListener('change', saveDraft);
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  // Basic validation
   if (!form.checkValidity()) {
     form.reportValidity();
     return;
   }
 
   submitBtn.disabled = true;
-  submitBtn.querySelector('span').textContent = 'Sending...';
+  submitBtn.querySelector('span').textContent = 'Submitting...';
 
   const formData = new FormData(form);
-  const data = { formType: 'intake' };
+  const data = { formType: 'brief' };
   formData.forEach((value, key) => { data[key] = value; });
 
   try {
@@ -66,7 +63,7 @@ form.addEventListener('submit', async (e) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } catch (err) {
     submitBtn.disabled = false;
-    submitBtn.querySelector('span').textContent = 'Send';
+    submitBtn.querySelector('span').textContent = 'Submit Brief';
     alert('Something went wrong. Please try again or email directly.');
     console.error(err);
   }
