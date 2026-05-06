@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekt Brief · ALIVE Design Studio</title>
+  <meta name="description" content="A részletes brief, ami segít megfelelően elindítani a projektet." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="form-header">
+    <div class="container">
+      <a href="https://alivedesignstudio.net" class="logo">
+        <span class="logo-name">ALIVE</span>
+        <span class="logo-tagline">Design Studio</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="form-main">
+    <div class="container">
+
+      <div class="form-intro">
+        <p class="form-eyebrow">Projekt Brief · Onboarding</p>
+        <h1 class="form-title">Projekt <em>Brief</em></h1>
+        <p class="form-subtitle">Most, hogy együtt dolgozunk, ez a brief segít abban, hogy alaposan megértsem a termékedet, a felhasználóidat és a céljaidat. Szánj rá időt — minél több részletet osztasz meg, annál jobb lesz a végeredmény. Semmi nincs kőbe vésve; minden részletet közösen finomítunk.</p>
+      </div>
+
+      <form id="briefForm" class="form-grid" novalidate>
+
+        <!-- Section 1 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">01</span>
+            <h2 class="section-title">A projektről</h2>
+          </div>
+
+          <div class="field">
+            <label for="companyName">Cég vagy projekt neve</label>
+            <input type="text" id="companyName" name="companyName" required />
+          </div>
+
+          <div class="field">
+            <label for="coreIdea">Az alapötlet</label>
+            <p class="field-help">Mutasd be a terméket 2–3 mondatban.</p>
+            <textarea id="coreIdea" name="coreIdea" rows="3" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="problem">A probléma</label>
+            <p class="field-help">Pontosan milyen problémát oldasz meg a felhasználóknak, és miért fontos ez?</p>
+            <textarea id="problem" name="problem" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="audience">Célközönség</label>
+            <p class="field-help">Kik az elsődleges felhasználók? Gondolj az életkorra, technikai jártasságra és a céljaikra.</p>
+            <textarea id="audience" name="audience" rows="3" required></textarea>
+          </div>
+
+          <div class="field">
+            <label>Fázis</label>
+            <div class="radio-group horizontal">
+              <label class="radio-card"><input type="radio" name="stage" value="Új ötlet" required /><span>Új ötlet</span></label>
+              <label class="radio-card"><input type="radio" name="stage" value="MVP" /><span>MVP</span></label>
+              <label class="radio-card"><input type="radio" name="stage" value="Érett termék" /><span>Érett termék</span></label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Design irány</h2>
+          </div>
+
+          <div class="field">
+            <label for="visualStyle">Vizuális stílus</label>
+            <p class="field-help">Milyen vizuális stílust szeretnél (pl. minimalista, játékos, professzionális), vagy oszd meg a meglévő brand guideline-jaidat.</p>
+            <textarea id="visualStyle" name="visualStyle" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="personality">Alapértékek és személyiség</label>
+            <p class="field-help">Milyen tulajdonságokat testesítsen meg a brand? (pl. Professzionális & Megbízható vs. Bátor & Disruptív)</p>
+            <textarea id="personality" name="personality" rows="3"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="competitors">Versenytársak és inspiráció</label>
+            <p class="field-help">Nevezz meg 2–3 terméket, amik dizájnját vagy funkcionalitását csodálod vagy nem szereted, és miért.</p>
+            <textarea id="competitors" name="competitors" rows="4"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="visualInspiration">Bármi vizuális, amit szeretsz?</label>
+            <p class="field-help">Linkek, képernyőfotók, moodboardok jöhetnek — illeszd be a URL-eket ide.</p>
+            <textarea id="visualInspiration" name="visualInspiration" rows="3"></textarea>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Hatókör és funkciók</h2>
+          </div>
+
+          <div class="field">
+            <label for="mustHave">Kötelező funkciók</label>
+            <p class="field-help">Mi az a 3 nem alkudozható funkció ehhez a verzióhoz?</p>
+            <textarea id="mustHave" name="mustHave" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="niceToHave">Jó ha van funkciók</label>
+            <p class="field-help">Dolgok, amiket szeretnél, de meg lehet nélkülük lenni.</p>
+            <textarea id="niceToHave" name="niceToHave" rows="3"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Fejlesztés</label>
+            <p class="field-help">Van fejlesztői csapatod, vagy a frontend implementációt is rám bíznád?</p>
+            <div class="radio-group">
+              <label class="radio-card"><input type="radio" name="development" value="Van fejlesztői csapatom" required /><span>Van fejlesztői csapatom</span></label>
+              <label class="radio-card"><input type="radio" name="development" value="Frontend is kell" /><span>Frontend is kell</span></label>
+              <label class="radio-card"><input type="radio" name="development" value="Még nem tudom" /><span>Még nem tudom</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="techStack">Technikai megkötések</label>
+            <p class="field-help">Van meglévő tech stack, framework vagy követelmény, amit tudnom kéne?</p>
+            <textarea id="techStack" name="techStack" rows="3"></textarea>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Siker és eredmények</h2>
+          </div>
+
+          <div class="field">
+            <label for="successMetrics">Sikerkritériumok</label>
+            <p class="field-help">Honnan tudod majd, hogy 6 hónap múlva ez a projekt sikeres volt? (pl. felhasználói aktivitás, konverziós ráta, megtartás)</p>
+            <textarea id="successMetrics" name="successMetrics" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="timeline">Időkeret</label>
+            <p class="field-help">Mikor kell elindulnia vagy készen állnia?</p>
+            <input type="text" id="timeline" name="timeline" required />
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">05</span>
+            <h2 class="section-title">Gyakorlati részletek</h2>
+          </div>
+
+          <div class="field">
+            <label>Fájljogok és tulajdon</label>
+            <p class="field-help">Hogyan mutatható be ez a projekt később?</p>
+            <div class="radio-group">
+              <label class="radio-card"><input type="radio" name="rights" value="Teljes engedély" required /><span><strong>Teljes engedély</strong> (Preferált) — 5% portfólió kedvezmény jár köszönetképpen</span></label>
+              <label class="radio-card"><input type="radio" name="rights" value="Anonimizált bemutató" /><span><strong>Anonimizált bemutató</strong> — érzékeny adatok placeholderekre cserélve</span></label>
+              <label class="radio-card"><input type="radio" name="rights" value="Nincs engedély" /><span><strong>Nincs engedély (Privát)</strong> — 10–15% privát díj alkalmazandó</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="budget">Költségvetés</label>
+            <p class="field-help">Végleges, megerősített költségvetés ehhez a projekthez.</p>
+            <div class="form-row budget-row">
+              <select id="briefCurrency" name="currency" class="currency-select">
+                <option value="HUF">Ft HUF</option>
+                <option value="EUR">€ EUR</option>
+                <option value="USD">$ USD</option>
+                <option value="Egyéb">Egyéb</option>
+              </select>
+              <input type="text" id="budget" name="budget" placeholder="pl. 1 200 000" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Fizetési mód</label>
+            <div class="radio-group horizontal">
+              <label class="radio-card"><input type="radio" name="payment" value="Banki átutalás (Revolut)" required /><span>Banki átutalás (Revolut)</span></label>
+              <label class="radio-card"><input type="radio" name="payment" value="PayPal" /><span>PayPal</span></label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-num">06</span>
+            <h2 class="section-title">Bármi más</h2>
+          </div>
+
+          <div class="field">
+            <label for="other">Van bármi más, amit tudnom kellene mielőtt elkezdjük?</label>
+            <p class="field-help">Aggodalmak, remények, korábbi rossz tapasztalatok dizájnerekkel, dealbreakerek — az őszinteség segít.</p>
+            <textarea id="other" name="other" rows="4"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="email">Email címed</label>
+            <p class="field-help">Ide küldöm a visszaigazolást.</p>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+        </section>
+
+        <button type="submit" class="submit-btn">
+          <span>Brief beküldése</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+      </form>
+
+      <div id="confirmation" class="confirmation" hidden>
+        <div class="confirmation-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M16 24l6 6 12-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="confirmation-title">Köszönöm — most már mindenem megvan, ami a kezdéshez kell.</h2>
+        <p class="confirmation-text">Részletesen átnézem a válaszaidat és 2 munkanapon belül visszajelzek esetleges kérdésekkel a kezdés előtt.</p>
+        <p class="confirmation-text small">Izgatottan várom a közös munkát.</p>
+        <a href="https://alivedesignstudio.net/hu/" class="confirmation-link">← Vissza az oldalra</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="brief.js"></script>
+
+</body>
+</html>

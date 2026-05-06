@@ -50,6 +50,7 @@ form.addEventListener('submit', async (e) => {
   const formData = new FormData(form);
   const data = { formType: 'intake' };
   formData.forEach((value, key) => { data[key] = value; });
+  data.lang = document.documentElement.lang || 'en';
 
   try {
     const res = await fetch('/api/submit', {
